@@ -51,7 +51,7 @@
             {
               "label": "First ever user of contraceptive",
               "type": "obs",
-              "required": true,
+              "required": "true",
               "id": "firstEverUser",
               "questionOptions": {
                 "rendering": "radio",
@@ -87,7 +87,7 @@
             {
               "label": "Counselled on family planning?",
               "type": "obs",
-              "required": true,
+              "required": "true",
               "id": "counselledOnFamilyPlanning",
               "questionOptions": {
                 "rendering": "radio",
@@ -123,7 +123,7 @@
             {
               "label": "Contraceptive dispensed at this visit?",
               "type": "obs",
-              "required": false,
+              "required": "true",
               "id": "contraceptiveDispensedF",
               "questionOptions": {
                 "rendering": "select",
@@ -191,7 +191,7 @@
             {
               "label": "Contraceptive dispensed at this visit?",
               "type": "obs",
-              "required": false,
+              "required": "true",
               "id": "contraceptiveDispensedM",
               "historicalExpression": "HD.getObject('prevEnc').getValue('374AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')",
               "questionOptions": {
@@ -216,7 +216,7 @@
             {
               "label": "Type of visit for method",
               "type": "obs",
-              "required": true,
+              "required": "true",
               "id": "typeOfVisitForMethod1",
               "questionOptions": {
                 "rendering": "select",
@@ -234,13 +234,13 @@
               },
               "validators": [],
               "hide": {
-                "hideWhenExpression": "isEmpty(contraceptiveDispensed) || age < 15 || contraceptiveDispensed === '160570AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensed === '1873AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensed === '162422AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensed === '76022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensed === '162794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensed === '165464AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensed === '1472AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensed === '1489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(contraceptiveDispensedF) || age < 15 || contraceptiveDispensedF === '160570AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensedF === '1873AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensedF === '162422AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensedF === '76022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensedF === '162794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensedF === '165464AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensedF === '1472AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensedF === '1489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensedM === '1489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
               "label": "Type of visit for method",
               "type": "obs",
-              "required": true,
+              "required": "true",
               "id": "typeOfVisitForMethod2",
               "questionOptions": {
                 "rendering": "select",
@@ -265,14 +265,14 @@
                 ]
               },
               "validators": [],
-              "hide": {
-                "hideWhenExpression": "isEmpty(contraceptiveDispensed) || age < 15 || sex !== 'F' || contraceptiveDispensed !== '162794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && contraceptiveDispensed !== '165464AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && contraceptiveDispensed !== '1873AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && contraceptiveDispensed !== '162422AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && contraceptiveDispensed !== '76022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+               "hide": {
+                "hideWhenExpression": "isEmpty(contraceptiveDispensedF) || age < 15 || sex !== 'F' || contraceptiveDispensedF !== '162794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && contraceptiveDispensedF !== '165464AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && contraceptiveDispensedF !== '1873AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && contraceptiveDispensedF !== '162422AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && contraceptiveDispensedF !== '76022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
               "label": "Quantity dispensed",
               "type": "obs",
-              "required": true,
+              "required": "true",
               "id": "quantityDispensed",
               "questionOptions": {
                 "rendering": "number",
@@ -287,8 +287,8 @@
                 "answers": []
               },
               "validators": [],
-              "hide": {
-                "hideWhenExpression": "isEmpty(contraceptiveDispensed) || age < 15 || contraceptiveDispensed !== '164814AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && contraceptiveDispensed !== '164813AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && contraceptiveDispensed !== '160570AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && contraceptiveDispensed !== '159784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && contraceptiveDispensed !== '159783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+               "hide": {
+                "hideWhenExpression": " age < 15 || contraceptiveDispensedF === '1489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensedF === '1472AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || contraceptiveDispensedM === '1489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
